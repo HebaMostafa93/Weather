@@ -1,0 +1,160 @@
+<html>
+
+<head>
+  <title>Weather</title>
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!---------------- Favicon------------ -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!---------------- Website Fonts ------------ -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- ------------ Font Awsome Library Icon ----------- -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ------------- Bootstrap ------------- -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ------------- Main Style Sheet ------------- -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg p-5">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white d-flex" href="#">
+          <img src="images/logo.png" alt="Logo" class="d-inline-block align-text-top me-2">
+          <div>
+            <p class="logo-name fw-bold m-0">Weather</p>
+            <span class="logo-desc">tagline goes here</span>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+
+<section id="content" class= "py-5">
+
+<div class="container">
+  <form  class="find-location position-relative">
+    <input  class="search" type="text" placeholder="Find your location..." id="search">
+    <input class="submit" type="button" value="Find" id="submit">
+  </form>
+
+  <div class=" forecast-container mt-5">
+
+    <div class="col-md-4 forecast">
+      <div class="today forecast-header d-flex justify-content-between">
+        <!-- <div class="day">Saturday</div>
+        <div class="date">5August</div> -->
+      </div>
+
+      <div id="current" class="forecast-content px-4 py-5">
+        <!-- <div class="location">Cairo</div>
+        <div class="degree d-flex align-items-center">
+          <div class="num text-white fw-bold">28<sup>o</sup>C</div>
+          <div class="forecast-icon ">
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="" width="90">
+          </div>	
+        </div>
+        <div class="custom">Clear</div>
+        <span class="pt-2"><img src="images/icon-umberella.png" alt="" class="pe-1"> 20%</span>
+        <span><img src="images/icon-wind.png" alt="" class="pe-1"> 18km/h</span>
+        <span><img src="images/icon-compass.png" alt="" class="pe-1"> East</span> -->
+      </div>
+    </div>
+    <div class="col-md-4 center-forecast text-center">
+      <div class="forecast-header ">
+        <div id="day2" class="day"></div>
+      </div>
+      <div id="nextDayForecast" class=" forecast-content px-4 py-5">
+        <div class="degree ">
+
+          <div class="forecast-icon mb-4">
+            <img id="forecastIcon2" src="" alt="" width="48">
+          </div>
+          <div id="forecastDegree2" class="degree text-white fw-bold"><sup></sup></div>
+          <small id="smallTemp2"><sup></sup></small>
+        </div>
+        <div  id="custom2" class="custom my-4"></div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="forecast-header ">
+        <div  id="day3" class="day"></div>
+      </div>
+      <div id="thirdDayForecast" class=" forecast-content px-4 py-5">
+        <div class="degree ">
+
+          <div class="forecast-icon mb-4">
+            <img id="forecastIcon3"  src="" alt="" width="48">
+          </div>
+          <div id="forecastDegree3" class="degree text-white fw-bold"><sup></sup></div>
+          <small  id="smallTemp3"><sup></sup></small>
+        </div>
+        <div id="custom3" class="custom my-4"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<!-- get location function  -->
+<!-- <button onclick="getLocation()">Try It</button>
+<p id="demo"></p> -->
+
+<footer id="footer" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <form  class="find-location position-relative">
+          <input class="search" type="text" placeholder="Enter your email to subscribe..." >
+          <input class="submit" type="submit" value="Subscribe" >
+        </form>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <div class="social-links text-end">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyrights mt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+  </div>
+</footer>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
